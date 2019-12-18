@@ -7,9 +7,9 @@ class StickCreator extends Producer {
     this.tickInterval = tickInterval;
   }
 
-  produces() {
+  onTick() {
     stick.increment();
   }
 }
 
-export const manual = new StickCreator(10);
+export const manualStick = new StickCreator(5);

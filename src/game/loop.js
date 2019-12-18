@@ -1,8 +1,8 @@
 import { Loop } from 'manugo';
-import { manual } from './producers/manual';
-import { stick } from './resources/stick';
+import { producers } from './producers';
+import { resources } from './resources';
 
 (new Loop())
-  .load({ stick, manual })
-  .with({ manual })
+  .load({ ...producers, ...resources })
+  .with({ ...producers })
   .start();

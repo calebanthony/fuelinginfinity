@@ -1,6 +1,6 @@
 <script>
     import { stick } from '../game/resources/stick';
-    import { manual } from '../game/producers/manual';
+    import { manualStick } from '../game/producers/manual';
 </script>
 
 <svelte:head>
@@ -9,10 +9,10 @@
 
 You have { $stick } { $stick === 1 ? 'stick' : 'sticks' }.
 
-<button class="button" on:click={() => manual.activate()}>
+<button class="button" on:click={() => manualStick.activate()}>
     Get More Sticks!
 </button>
 
-<button class="button is-danger" on:click={() => manual.deactivate()}>
+<button class="button is-danger" on:click={() => manualStick.deactivate()}>
     Stop Gathering!
 </button>
