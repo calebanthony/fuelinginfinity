@@ -8,7 +8,7 @@ class StickCreator extends Producer {
   }
 
   onTick() {
-    stick.increment();
+    stick.increment(2);
   }
 }
 
