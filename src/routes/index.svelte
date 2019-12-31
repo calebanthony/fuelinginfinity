@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-	<title>Sapper project template</title>
+	<title>Fueling Infinity</title>
 </svelte:head>
 
 You have { $stick } { $stick === 1 ? 'stick' : 'sticks' }.

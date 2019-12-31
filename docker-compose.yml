@@ -1,0 +1,17 @@
+# for local development
+version: '3.7'
+services:
+  fuelinginfinity:
+    build:
+      context: .
+      target: 'develop-stage'
+    ports:
+      - '3000:3000'
+      - '10000:10000'
+    volumes:
+      - '.:/app'
+      - '../manugo:/app/node_modules/manugo'
+      - 'app/node_modules'
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    command: /bin/sh -c "yarn dev"
