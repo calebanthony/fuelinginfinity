@@ -1,5 +1,5 @@
-import { manualStick } from './manual';
+import { stickProducer } from './stickProducer';
 
 export const producers = {
-  manualStick,
+  stickProducer,
 }
