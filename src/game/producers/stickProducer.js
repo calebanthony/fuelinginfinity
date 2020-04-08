@@ -1,7 +1,7 @@
-import { Producer } from 'manugo';
+import { Generator } from 'manugo';
 import { stick } from '../resources/stick';
 
-class StickProducer extends Producer {
+class StickProducer extends Generator {
   constructor(name) {
     super(name);
     this.tickInterval = 5;
