@@ -1,9 +1,9 @@
 import { Resource } from 'manugo';
 
 class RoughStone extends Resource {
-  constructor() {
-    super();
+  constructor(name) {
+    super(name);
   }
 }
 
-export const roughStone = new RoughStone();
+export const roughStone = new RoughStone('Rough Stone').setIcon('snowplow');

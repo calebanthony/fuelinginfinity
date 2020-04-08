@@ -2,7 +2,7 @@
     // Import components
     import ResourcePanel from '../components/ResourcePanel.svelte';
     import ManualStickGenerator from '../components/manual/StickGenerator.svelte';
-    import UnlockRoughStones from '../components/craft/RoughStones.svelte';
+    import Craft from '../components/Craft.svelte';
 </script>
 
 <svelte:head>
@@ -22,7 +22,7 @@
         <hr />
         <h2 class="title is-2">Craft</h2>
         <div class="columns is-multiline">
-            <UnlockRoughStones />
+            <Craft />
         </div>
     </div>
 </div>
