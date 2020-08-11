@@ -2,7 +2,7 @@
     export let producer;
 </script>
 
-{#if !$producer.unlocked}
+{#if $producer.unlocked}
     <div class="column is-4 box">
         <div class="level">
             <div class="level-item">
@@ -12,11 +12,13 @@
             </div>
             <div class="level-right">
                 <div class="level-item buttons">
-                    <button class="button" on:click={() => producer.activate()}>
+                    <button class="button is-small" on:click={() => producer.activate()}>
                         {producer.name}
                     </button>
-                    <button class="button is-danger" on:click={() => producer.deactivate()}>
-                        Stop
+                    <button
+                        class="button is-danger is-small"
+                        on:click={() => producer.deactivate()}>
+                        <i class="fas fa-ban" />
                     </button>
                 </div>
             </div>

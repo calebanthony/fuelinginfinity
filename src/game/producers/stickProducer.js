@@ -1,15 +1,15 @@
-import { Generator } from 'manugo';
+import { BaseProducer } from './baseProducer';
 import { stick } from '../resources/stick';
 
-class StickProducer extends Generator {
+class StickProducer extends BaseProducer {
   constructor(name) {
     super(name);
-    this.tickInterval = 5;
+    this.tickInterval = 4;
   }
 
   onTick() {
-    stick.increment(2);
+    stick.increment(1);
   }
 }
 
-export const stickProducer = new StickProducer('Gather Sticks').setIcon('staff');
+export const stickProducer = new StickProducer('Gather Sticks').setIcon('staff').unlock();
