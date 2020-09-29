@@ -1,7 +1,7 @@
 import { Unlock } from 'manugo';
-import { stick } from '../resources/stick';
-import { roughStone } from '../resources/roughStone';
-import { roughStoneProducer } from '../producers/roughStoneProducer';
+import { stick } from 'game/resources/stick';
+import { roughStone } from 'game/resources/roughStone';
+import { roughStoneProducer } from 'game/producers';
 
 const onUnlock = () => {
   roughStone.unlock();
@@ -9,6 +9,7 @@ const onUnlock = () => {
 }
 
 export const unlockRoughStones = new Unlock('Rough Stones')
-  .setDescription('Unlocks the ability to collect rough stones.')
+  .setDescription('Unlocks the ability to dig rough stones.')
   .setCost(stick, 40)
+  .makeVisibleWhen(stick, 10)
   .execute(onUnlock);

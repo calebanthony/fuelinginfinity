@@ -1,5 +1,5 @@
 import { stickReward } from './stickReward';
 
-export const triggers = {
+export {
   stickReward,
 };

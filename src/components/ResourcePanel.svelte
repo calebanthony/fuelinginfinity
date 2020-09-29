@@ -1,6 +1,6 @@
 <script>
     import InventoryItem from './InventoryItem';
-    import { resources } from '../game/resources';
+    import * as resources from 'game/resources';
 
     let filter = '';
     $: filteredResources = Object.values(resources).filter(resource => {

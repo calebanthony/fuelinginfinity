@@ -2,9 +2,9 @@
     // Import components
     import ResourcePanel from '../components/ResourcePanel.svelte';
     import Producer from '../components/Producer.svelte';
-    import Craftable from '../components/Craftable.svelte';
-    import { unlocks } from '../game/unlocks';
-    import { producers } from '../game/producers';
+    import Unlockable from '../components/Unlockable.svelte';
+    import * as unlocks from 'game/unlocks';
+    import * as producers from 'game/producers';
 </script>
 
 <svelte:head>
@@ -16,7 +16,8 @@
         <ResourcePanel />
     </div>
     <div class="column is-9">
-        <h2 class="title is-2">Produce</h2>
+        <h2 class="title is-2">Manually Produce</h2>
+        <p class="subtitle is-size-6">Only 1 can run at a time.</p>
         <div class="columns is-multiline">
             {#each Object.values(producers) as producer}
                 <Producer {producer} />
@@ -24,10 +25,10 @@
         </div>
 
         <hr />
-        <h2 class="title is-2">Craft</h2>
+        <h2 class="title is-2">Unlocks</h2>
         <div class="columns is-multiline">
             {#each Object.values(unlocks) as unlock}
-                <Craftable {unlock} />
+                <Unlockable {unlock} />
             {/each}
         </div>
     </div>

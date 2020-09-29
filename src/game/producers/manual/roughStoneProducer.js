@@ -1,10 +1,10 @@
-import { BaseProducer } from './baseProducer';
-import { roughStone } from '../resources/roughStone';
+import { BaseProducer } from 'game/producers/baseProducer';
+import { roughStone } from 'game/resources/roughStone';
 
 class RoughStoneProducer extends BaseProducer {
   constructor(name) {
     super(name);
-    this.tickInterval = 8;
+    this.tickInterval = 25;
   }
 
   onTick() {

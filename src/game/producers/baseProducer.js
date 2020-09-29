@@ -2,7 +2,7 @@ import { Generator } from 'manugo';
 
 let allProducers = null;
 
-import('./index.js').then(({ producers }) => {
+import('./index.js').then((producers) => {
   allProducers = producers;
 });
 

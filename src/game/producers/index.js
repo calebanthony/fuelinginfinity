@@ -1,7 +1,7 @@
-import { stickProducer } from './stickProducer';
-import { roughStoneProducer } from './roughStoneProducer';
+import { stickProducer } from './manual/stickProducer';
+import { roughStoneProducer } from './manual/roughStoneProducer';
 
-export const producers = {
+export {
   stickProducer,
   roughStoneProducer,
 }

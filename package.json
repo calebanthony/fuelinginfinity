@@ -13,13 +13,14 @@
   },
   "dependencies": {
     "compression": "^1.7.1",
+    "game": "link:./src/game",
     "polka": "^1.0.0-next.9",
     "sirv": "^0.4.0"
   },
   "devDependencies": {
     "bulma": "^0.8.0",
     "cssnano": "^4.1.10",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.14.0",
     "npm-run-all": "^4.1.5",
     "postcss": "^7.0.21",
     "sapper": "^0.27.0",

@@ -1,8 +1,8 @@
 import { Loop } from 'manugo';
-import { unlocks } from './unlocks';
-import { triggers } from './triggers';
-import { producers } from './producers';
-import { resources } from './resources';
+import * as unlocks from './unlocks';
+import * as triggers from './triggers';
+import * as producers from './producers';
+import * as resources from './resources';
 
 (new Loop())
   .load({ ...producers, ...resources, ...triggers, ...unlocks })

@@ -1,7 +1,7 @@
 import { stick } from './stick';
 import { roughStone } from './roughStone';
 
-export const resources = {
+export {
   stick,
   roughStone,
 }
