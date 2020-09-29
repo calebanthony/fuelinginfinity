@@ -12,7 +12,10 @@
             </div>
             <div class="level-right">
                 <div class="level-item buttons">
-                    <button class="button is-small" on:click={() => producer.activate()}>
+                    <button
+                        title={producer.flavor}
+                        class="button is-small"
+                        on:click={() => producer.activate()}>
                         {producer.name}
                     </button>
                     <button

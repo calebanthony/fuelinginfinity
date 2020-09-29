@@ -2,11 +2,11 @@ import { Generator } from 'manugo';
 
 let allProducers = null;
 
-import('./index.js').then((producers) => {
-  allProducers = producers;
+import('./index.js').then((manualProducers) => {
+  allProducers = manualProducers;
 });
 
-export class BaseProducer extends Generator {
+export class ManualProducer extends Generator {
   onActivate() {
     Object.values(allProducers).forEach(producer => producer.deactivate());
   }

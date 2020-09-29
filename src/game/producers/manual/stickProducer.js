@@ -1,7 +1,7 @@
-import { BaseProducer } from 'game/producers/baseProducer';
-import { stick } from 'game/resources/stick';
+import { ManualProducer } from './manualProducer';
+import { stick } from 'game/resources';
 
-class StickProducer extends BaseProducer {
+class StickProducer extends ManualProducer {
   constructor(name) {
     super(name);
     this.tickInterval = 9;

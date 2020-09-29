@@ -1,14 +1,14 @@
-import { BaseProducer } from 'game/producers/baseProducer';
-import { roughStone } from 'game/resources/roughStone';
+import { ManualProducer } from './manualProducer';
+import { roughStone } from 'game/resources';
 
-class RoughStoneProducer extends BaseProducer {
+class RoughStoneProducer extends ManualProducer {
   constructor(name) {
     super(name);
     this.tickInterval = 25;
   }
 
   onTick() {
-    roughStone.increment(1);
+    roughStone.increment();
   }
 }
 

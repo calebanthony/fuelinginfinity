@@ -1,7 +1,7 @@
 import { Unlock } from 'manugo';
-import { stick } from 'game/resources/stick';
-import { roughStone } from 'game/resources/roughStone';
-import { roughStoneProducer } from 'game/producers';
+import { stick } from 'game/resources';
+import { roughStone } from 'game/resources';
+import { roughStoneProducer } from 'game/producers/manual';
 
 const onUnlock = () => {
   roughStone.unlock();
