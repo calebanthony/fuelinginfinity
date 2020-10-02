@@ -1,7 +1,7 @@
 import { Generator } from 'manugo';
 import { stick } from 'game/resources';
 
-class Woodcutter extends Generator {
+class StickCollector extends Generator {
   constructor(name) {
     super(name);
     this.tickInterval = 50;
@@ -12,7 +12,7 @@ class Woodcutter extends Generator {
   }
 }
 
-export const woodcutter = new Woodcutter('Woodcutter')
+export const stickCollector = new StickCollector('Woodcutter')
   .setIcon('axe')
   .setFlavor('Produces sticks.')
   .setStore('level', 1);

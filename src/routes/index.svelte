@@ -5,7 +5,7 @@
     import Unlockable from '../components/Unlockable.svelte';
 
     import * as unlocks from 'game/unlocks';
-    import { woodcutter } from 'game/producers/gatherers';
+    import { stickCollector } from 'game/producers/gatherers';
 
     import Manual from './Manual.svelte';
     import Gather from './Gather.svelte';
@@ -25,7 +25,7 @@
                 <Tab label="Manual">
                     <Manual />
                 </Tab>
-                {#if $woodcutter.unlocked}
+                {#if $stickCollector.unlocked}
                     <Tab label="Gather">
                         <Gather />
                     </Tab>

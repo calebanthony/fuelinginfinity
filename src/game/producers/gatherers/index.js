@@ -1,5 +1,1 @@
-import { woodcutter } from './woodcutter';
-
-export {
-  woodcutter,
-}
+export { stickCollector } from './stickCollector';

@@ -1,23 +1,13 @@
-import { stick } from './stick';
-import { roughStone } from './roughStone';
-import { processedStone } from './processedStone';
-import { tinDust } from './dust/tinDust';
-import { copperDust } from './dust/copperDust';
-import { ironDust } from './dust/ironDust';
-import { silverDust } from './dust/silverDust';
-import { goldDust } from './dust/goldDust';
-import { bronzeOre } from './ore/bronzeOre';
-import { bronzeIngot } from './ingot/bronzeIngot';
-
-export {
-  stick,
-  roughStone,
-  processedStone,
-  tinDust,
-  copperDust,
-  ironDust,
-  silverDust,
-  goldDust,
-  bronzeOre,
-  bronzeIngot,
-}
+export { stick } from './stick';
+export { roughStone } from './roughStone';
+export { processedStone } from './processedStone';
+export { tinDust } from './dust/tinDust';
+export { copperDust } from './dust/copperDust';
+export { ironDust } from './dust/ironDust';
+export { silverDust } from './dust/silverDust';
+export { goldDust } from './dust/goldDust';
+export { bronzeOre } from './ore/bronzeOre';
+export { bronzeIngot } from './ingot/bronzeIngot';
+export { woodenGear } from './gears/woodenGear';
+export { bronzeGear } from './gears/bronzeGear';
+export { ironGear } from './gears/ironGear';

@@ -1,5 +1,1 @@
-import { stickReward } from './stickReward';
-
-export {
-  stickReward,
-};
+export { stickReward } from './stickReward';

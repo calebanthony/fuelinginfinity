@@ -1,15 +1,13 @@
-import { unlockRoughStones } from './manualAge/roughStones';
-import { grindRoughStones } from './manualAge/grindRoughStones';
-import { siftProcessedStone } from './manualAge/siftProcessedStone';
-import { canCompressBronze } from './manualAge/compressBronze';
-import { canSmeltBronze } from './manualAge/smeltBronze';
-import { getWoodcutter } from './automationAge/getWoodcutter';
+/**
+ * Manual Age
+ */
+export { unlockRoughStones } from './manualAge/roughStones';
+export { grindRoughStones } from './manualAge/grindRoughStones';
+export { siftProcessedStone } from './manualAge/siftProcessedStone';
+export { canCompressBronze } from './manualAge/compressBronze';
+export { canSmeltBronze } from './manualAge/smeltBronze';
 
-export {
-  unlockRoughStones,
-  grindRoughStones,
-  siftProcessedStone,
-  canCompressBronze,
-  canSmeltBronze,
-  getWoodcutter,
-};
+/**
+ * Automation Age
+ */
+export { getStickCollector } from './automationAge/getStickCollector';
