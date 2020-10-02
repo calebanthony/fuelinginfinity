@@ -18,14 +18,26 @@
     "sirv": "^0.4.0"
   },
   "devDependencies": {
+    "@sapper/app": "link:./src/node_modules/@sapper/app",
+    "@sapper/server": "link:./src/node_modules/@sapper/server",
+    "@sapper/service-worker": "link:./src/node_modules/@sapper/service-worker",
     "bulma": "^0.8.0",
     "cssnano": "^4.1.10",
     "node-sass": "^4.14.0",
     "npm-run-all": "^4.1.5",
     "postcss": "^7.0.21",
+    "renderless-svelte": "^1.2.0",
     "sapper": "^0.27.0",
     "svelte": "^3.0.0",
     "svelte-loader": "^2.9.0",
     "webpack": "^4.7.0"
+  },
+  "dependenciesMeta": {
+    "sapper": {
+      "unplugged": true
+    },
+    "svelte": {
+      "unplugged": true
+    }
   }
 }

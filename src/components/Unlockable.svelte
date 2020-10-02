@@ -4,7 +4,7 @@
     const runUnlock = unlock => {
         const worked = unlock.run();
         if (worked === false) {
-            alert('no');
+            alert("Didn't work, sorry");
         }
     };
 </script>

@@ -1,8 +1,9 @@
-import { unlockRoughStones } from './roughStones';
-import { grindRoughStones } from './grindRoughStones';
-import { siftProcessedStone } from './siftProcessedStone';
-import { canCompressBronze } from './compressBronze';
-import { canSmeltBronze } from './smeltBronze';
+import { unlockRoughStones } from './manualAge/roughStones';
+import { grindRoughStones } from './manualAge/grindRoughStones';
+import { siftProcessedStone } from './manualAge/siftProcessedStone';
+import { canCompressBronze } from './manualAge/compressBronze';
+import { canSmeltBronze } from './manualAge/smeltBronze';
+import { getWoodcutter } from './automationAge/getWoodcutter';
 
 export {
   unlockRoughStones,
@@ -10,4 +11,5 @@ export {
   siftProcessedStone,
   canCompressBronze,
   canSmeltBronze,
+  getWoodcutter,
 };

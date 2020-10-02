@@ -12,6 +12,18 @@
   resolved "https://registry.yarnpkg.com/@polka/url/-/url-1.0.0-next.11.tgz#aeb16f50649a91af79dbe36574b66d0f9e4d9f71"
   integrity sha512-3NsZsJIA/22P3QUyrEDNA2D133H4j224twJrdipXN38dpnIOzAbUDtOwkcJ5pXmn75w7LSQDjA4tO9dm1XlqlA==
 
+"@sapper/app@link:./src/node_modules/@sapper/app":
+  version "0.0.0"
+  uid ""
+
+"@sapper/server@link:./src/node_modules/@sapper/server":
+  version "0.0.0"
+  uid ""
+
+"@sapper/service-worker@link:./src/node_modules/@sapper/service-worker":
+  version "0.0.0"
+  uid ""
+
 "@types/q@^1.5.1":
   version "1.5.4"
   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.4.tgz#15925414e0ad2cd765bfef58842f7e26a7accb24"
@@ -3589,6 +3601,11 @@ remove-trailing-separator@^1.0.1:
   resolved "https://registry.yarnpkg.com/remove-trailing-separator/-/remove-trailing-separator-1.1.0.tgz#c24bce2a283adad5bc3f58e0d48249b92379d8ef"
   integrity sha1-wkvOKig62tW8P1jg1IJJuSN52O8=
 
+renderless-svelte@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/renderless-svelte/-/renderless-svelte-1.2.0.tgz#d3703268c961df13a19147ad9080a452a5c384b9"
+  integrity sha512-n48RTkCwKfk2QSrUbv1ztaUegqhzi4U+iEmqDDe+bccd54QsL1V9jBdkibQJ6TcdAM7wyldEJuYpt4b3+ZfU4A==
+
 repeat-element@^1.1.2:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/repeat-element/-/repeat-element-1.1.3.tgz#782e0d825c0c5a3bb39731f84efee6b742e6b1ce"
@@ -4192,9 +4209,9 @@ svelte-loader@^2.9.0:
     svelte-dev-helper "^1.1.9"
 
 svelte@^3.0.0:
-  version "3.28.0"
-  resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.28.0.tgz#e257fab5666701cf230bea583ceb470bdda1344c"
-  integrity sha512-WJW8wD+aTmU5GUnTUjdhVF35mve2MjylubLgB6fGWoXHpYENdwcwWsWvjMQLayzMynqNH733h1Ck8wJzNR7gdQ==
+  version "3.29.0"
+  resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.29.0.tgz#80acac4254341ad8f3301e5ef03f4127ea967d96"
+  integrity sha512-f+A65eyOQ5ujETLy+igNXtlr6AEjAQLYd1yJE1VwNiXMQO5Z/Vmiy3rL+zblV/9jd7rtTTWqO1IcuXsP2Qv0OA==
 
 svgo@^1.0.0:
   version "1.3.2"

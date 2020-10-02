@@ -2,9 +2,12 @@ import { Loop } from 'manugo';
 import * as unlocks from './unlocks';
 import * as triggers from './triggers';
 import * as manualProducers from './producers/manual';
+import * as gatherers from './producers/gatherers';
 import * as resources from './resources';
 
-(new Loop(5))
-  .load({ ...manualProducers, ...resources, ...triggers, ...unlocks })
-  .withTickMethods({ ...manualProducers })
+import { tickDuration } from './config';
+
+(new Loop(tickDuration))
+  .load({ ...manualProducers, ...gatherers, ...resources, ...triggers, ...unlocks })
+  .withTickMethods({ ...manualProducers, ...gatherers })
   .start();

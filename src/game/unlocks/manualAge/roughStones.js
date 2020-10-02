@@ -1,6 +1,5 @@
 import { Unlock } from 'manugo';
-import { stick } from 'game/resources';
-import { roughStone } from 'game/resources';
+import { stick, roughStone } from 'game/resources';
 import { roughStoneProducer } from 'game/producers/manual';
 
 const onUnlock = () => {
