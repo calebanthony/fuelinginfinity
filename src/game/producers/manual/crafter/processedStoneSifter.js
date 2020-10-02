@@ -1,4 +1,4 @@
-import { ManualProducer } from './manualProducer';
+import { ManualProducer } from '../manualProducer';
 import { processedStone, tinDust, copperDust } from 'game/resources';
 
 class ProcessedStoneSifter extends ManualProducer {

@@ -3,7 +3,7 @@
     import { tickDuration } from 'game/config';
 
     const ticksPerSecond = 1000 / tickDuration;
-    const perSecond = ticksPerSecond / producer.tickInterval;
+    const perSecond = (ticksPerSecond / producer.tickInterval).toLocaleString();
 </script>
 
 {#if $producer.unlocked}

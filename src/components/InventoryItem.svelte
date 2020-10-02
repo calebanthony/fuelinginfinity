@@ -10,6 +10,6 @@
             </span>
         </div>
         <div class="column is-6">{item.name}</div>
-        <div class="column is-4">{$item.count}</div>
+        <div class="column is-4">{$item.count.toLocaleString()}</div>
     </div>
 {/if}

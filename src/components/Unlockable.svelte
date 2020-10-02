@@ -10,7 +10,7 @@
 </script>
 
 {#if !$unlock.unlocked && $unlock.visible}
-    <div class="column is-4 box">
+    <div class="column is-6 box">
         <div class="level">
             <div class="level-item">
                 <span class="has-text-weight-bold">Cost:</span>

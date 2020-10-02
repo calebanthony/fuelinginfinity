@@ -1,4 +1,4 @@
-import { ManualProducer } from './manualProducer';
+import { ManualProducer } from '../manualProducer';
 import { stick } from 'game/resources';
 
 class StickProducer extends ManualProducer {

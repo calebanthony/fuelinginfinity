@@ -1,4 +1,4 @@
-import { ManualProducer } from './manualProducer';
+import { ManualProducer } from '../manualProducer';
 import { stick, woodenGear } from 'game/resources';
 
 class CraftWoodenGear extends ManualProducer {

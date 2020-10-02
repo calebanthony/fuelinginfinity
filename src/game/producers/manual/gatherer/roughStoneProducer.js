@@ -1,4 +1,4 @@
-import { ManualProducer } from './manualProducer';
+import { ManualProducer } from '../manualProducer';
 import { roughStone } from 'game/resources';
 
 class RoughStoneProducer extends ManualProducer {

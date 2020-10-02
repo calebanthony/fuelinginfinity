@@ -1,4 +1,4 @@
-import { ManualProducer } from './manualProducer';
+import { ManualProducer } from '../manualProducer';
 import { tinDust, copperDust, bronzeOre } from 'game/resources';
 
 class CompressBronze extends ManualProducer {

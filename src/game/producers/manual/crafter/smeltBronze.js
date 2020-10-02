@@ -1,4 +1,4 @@
-import { ManualProducer } from './manualProducer';
+import { ManualProducer } from '../manualProducer';
 import { stick, bronzeOre, bronzeIngot } from 'game/resources';
 
 class SmeltBronze extends ManualProducer {

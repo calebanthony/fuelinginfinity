@@ -1,13 +1,25 @@
 <script>
     import ResourcePanel from '../components/ResourcePanel.svelte';
-    import Producer from '../components/Producer.svelte';
-    import * as manualProducers from 'game/producers/manual';
+    import ManualGatherer from '../components/Manual/Gatherer.svelte';
+    import ManualCrafter from '../components/Manual/Crafter.svelte';
+    import * as manualGatherers from 'game/producers/manual/gatherer';
+    import * as manualCrafters from 'game/producers/manual/crafter';
 </script>
 
-<h2 class="title is-2">Manually Produce</h2>
+<p class="subtitle is-size-6">Only 1 can run at a time.</p>
+<h2 class="title is-2">Produce</h2>
+<div class="columns is-multiline">
+    {#each Object.values(manualGatherers) as gatherer}
+        <ManualGatherer {gatherer} />
+    {/each}
+</div>
+
+<hr />
+
+<h2 class="title is-2">Craft</h2>
 <p class="subtitle is-size-6">Only 1 can run at a time.</p>
 <div class="columns is-multiline">
-    {#each Object.values(manualProducers) as producer}
-        <Producer {producer} />
+    {#each Object.values(manualCrafters) as crafter}
+        <ManualCrafter {crafter} />
     {/each}
 </div>
