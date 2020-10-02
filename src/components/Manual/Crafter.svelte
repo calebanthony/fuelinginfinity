@@ -1,8 +1,15 @@
 <script>
+    import Compressor from '../Machines/Compressor.svelte';
+    import GearCrafter from '../Machines/GearCrafter.svelte';
+
     export let crafter;
 </script>
 
-{#if $crafter.unlocked}
+{#if crafter.name === 'Compressor' && $crafter.unlocked}
+    <Compressor {crafter} />
+{:else if crafter.name === 'Craft Gears' && $crafter.unlocked}
+    <GearCrafter {crafter} />
+{:else if $crafter.unlocked}
     <div class="column is-4 box">
         <div class="level">
             <div class="level-item">

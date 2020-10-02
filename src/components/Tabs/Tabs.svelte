@@ -60,8 +60,9 @@
         /**
          * 0 = Manual
          * 1 = Gather
+         * 2 = Process
          */
-        changeTab(1);
+        changeTab(2);
     });
 
     onDestroy(() => {

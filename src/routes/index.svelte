@@ -6,9 +6,11 @@
 
     import * as unlocks from 'game/unlocks';
     import { stickCollector } from 'game/producers/gatherers';
+    import { baseFurnace } from 'game/producers/processors';
 
     import Manual from './Manual.svelte';
     import Gather from './Gather.svelte';
+    import Process from './Process.svelte';
 </script>
 
 <svelte:head>
@@ -28,6 +30,11 @@
                 {#if $stickCollector.unlocked}
                     <Tab label="Gather">
                         <Gather />
+                    </Tab>
+                {/if}
+                {#if $baseFurnace.unlocked}
+                    <Tab label="Process">
+                        <Process />
                     </Tab>
                 {/if}
             </Tabs>

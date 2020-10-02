@@ -1,3 +1,10 @@
 import { Resource } from 'manugo';
 
-export const stick = (new Resource('Stick')).setIcon('staff').unlock();
+class Stick extends Resource {
+  constructor(name) {
+    super(name);
+    this.fuelValue = 2;
+  }
+}
+
+export const stick = (new Stick('Stick')).setIcon('staff').unlock();

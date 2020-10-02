@@ -1,11 +1,11 @@
 import { Unlock } from 'manugo';
 import { stick, processedStone, bronzeOre, tinDust } from 'game/resources';
-import { compressBronze } from 'game/producers/manual';
+import { manualCompressor } from 'game/producers/manual';
 
 const onUnlock = () => {
   bronzeOre.unlock();
 
-  compressBronze.unlock();
+  manualCompressor.unlock();
 }
 
 export const canCompressBronze = new Unlock('Compress Bronze')

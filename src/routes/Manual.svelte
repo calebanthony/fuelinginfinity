@@ -1,5 +1,4 @@
 <script>
-    import ResourcePanel from '../components/ResourcePanel.svelte';
     import ManualGatherer from '../components/Manual/Gatherer.svelte';
     import ManualCrafter from '../components/Manual/Crafter.svelte';
     import * as manualGatherers from 'game/producers/manual/gatherer';

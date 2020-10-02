@@ -1,5 +1,4 @@
 <script>
-    import ResourcePanel from '../components/ResourcePanel.svelte';
     import Gatherer from '../components/Gatherer.svelte';
     import * as gatherers from 'game/producers/gatherers';
 </script>
