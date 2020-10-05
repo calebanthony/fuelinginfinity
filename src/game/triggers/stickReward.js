@@ -1,5 +1,5 @@
 import { Trigger } from 'manugo';
-import { stick } from '../resources/stick';
+import { stick } from 'game/resources';
 
 const increaseSticks = () => {
   stick.increment(500);

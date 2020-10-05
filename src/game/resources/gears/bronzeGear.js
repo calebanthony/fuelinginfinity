@@ -1,3 +1,3 @@
-import { Resource } from 'manugo';
+import { BaseResource } from '../baseResource';
 
-export const bronzeGear = new Resource('Bronze Gear').setIcon('cog');
+export const bronzeGear = new BaseResource('Bronze Gear').setIcon('cog').setColor('burnt-orange');

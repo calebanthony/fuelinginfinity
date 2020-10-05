@@ -1,4 +1,6 @@
 <script>
+    import Icon from './Partials/Icon.svelte';
+
     export let item;
 </script>
 
@@ -6,7 +8,7 @@
     <div class="panel-block columns">
         <div class="column is-2">
             <span class="icon">
-                <i class="fas fa-{item.icon}" aria-hidden="true" />
+                <Icon icon={item.icon} color={item.iconColor} />
             </span>
         </div>
         <div class="column is-6">{item.name}</div>

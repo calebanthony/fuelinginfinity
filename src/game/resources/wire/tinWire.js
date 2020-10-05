@@ -1,3 +1,3 @@
-import { Resource } from 'manugo';
+import { BaseResource } from '../baseResource';
 
-export const tinWire = new Resource('Tin Wire').setIcon('ethernet');
+export const tinWire = new BaseResource('Tin Wire').setIcon('ethernet').setColor('grey');

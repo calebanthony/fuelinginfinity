@@ -1,3 +1,3 @@
-import { Resource } from 'manugo';
+import { BaseResource } from '../baseResource';
 
-export const tinDust = new Resource('Tin Dust').setIcon('ball-pile');
+export const tinDust = new BaseResource('Tin Dust').setIcon('ball-pile').setColor('grey');

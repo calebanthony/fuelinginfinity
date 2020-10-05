@@ -1,3 +1,3 @@
-import { Resource } from 'manugo';
+import { BaseResource } from '../baseResource';
 
-export const copperWire = new Resource('Copper Wire').setIcon('ethernet');
+export const copperWire = new BaseResource('Copper Wire').setIcon('ethernet').setColor('burnt-orange');

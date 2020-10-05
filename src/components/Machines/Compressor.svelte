@@ -1,5 +1,11 @@
 <script>
     export let crafter;
+
+    function cost(recipe) {
+        return recipe.inputs.map(({ resource, count }) => {
+            return `${count} ${resource.name}`;
+        });
+    }
 </script>
 
 <div class="column is-4 box">
@@ -34,9 +40,13 @@
         <select on:blur={e => crafter.changeRecipe(e.target.value)}>
             {#each crafter.recipes as recipe}
                 {#if $crafter.recipe === recipe.output.name}
-                    <option value={recipe.output.name} selected>{recipe.output.name}</option>
+                    <option value={recipe.output.name} selected>
+                        {recipe.output.name} ({cost(recipe)})
+                    </option>
                 {:else}
-                    <option value={recipe.output.name}>{recipe.output.name}</option>
+                    <option value={recipe.output.name}>
+                        {recipe.output.name} ({cost(recipe)})
+                    </option>
                 {/if}
             {/each}
         </select>

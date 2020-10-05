@@ -1,6 +1,10 @@
-export { stick } from './stick';
 export { roughStone } from './roughStone';
 export { processedStone } from './processedStone';
+
+/**
+ * Fuel
+ */
+export { stick } from './fuel/stick';
 
 /**
  * Dust
@@ -8,10 +12,21 @@ export { processedStone } from './processedStone';
 export { tinDust } from './dust/tinDust';
 export { copperDust } from './dust/copperDust';
 export { ironDust } from './dust/ironDust';
-export { silverDust } from './dust/silverDust';
 export { goldDust } from './dust/goldDust';
+
+/**
+ * Ore
+ */
 export { bronzeOre } from './ore/bronzeOre';
+export { tinOre } from './ore/tinOre';
+export { copperOre } from './ore/copperOre';
+
+/**
+ * Ingots
+ */
 export { bronzeIngot } from './ingot/bronzeIngot';
+export { tinIngot } from './ingot/tinIngot';
+export { copperIngot } from './ingot/copperIngot';
 
 /**
  * Gears

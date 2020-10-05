@@ -1,6 +1,8 @@
 <script>
-    export let producer;
+    import Icon from './Partials/Icon.svelte';
     import { tickDuration } from 'game/config';
+
+    export let producer;
 
     const ticksPerSecond = 1000 / tickDuration;
     const perSecond = (ticksPerSecond / producer.tickInterval).toLocaleString();
@@ -12,7 +14,7 @@
             <div class="level-left">
                 <div class="level-item">
                     <span class="icon is-medium">
-                        <i class="fas fa-{producer.icon} fa-fw" />
+                        <Icon icon={producer.icon} color={producer.iconColor} />
                     </span>
                     <span>{producer.name}</span>
                 </div>

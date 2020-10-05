@@ -1,3 +1,3 @@
-import { Resource } from 'manugo';
+import { BaseResource } from '../baseResource';
 
-export const copperDust = new Resource('Copper Dust').setIcon('ball-pile');
+export const copperDust = new BaseResource('Copper Dust').setIcon('ball-pile').setColor('orange');
