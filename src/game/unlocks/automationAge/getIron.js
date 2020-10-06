@@ -1,5 +1,5 @@
 import { Unlock } from 'manugo';
-import { charcoal, stoneGear, woodenGear, copperWire, ironIngot, ironPlate, ironOre, ironRod, ironDust } from 'game/resources';
+import { charcoal, stoneGear, woodenGear, copperWire, ironIngot, ironPlate, ironOre, ironRod, ironDust, ironGear } from 'game/resources';
 
 const onUnlock = () => {
   ironDust.unlock();
@@ -7,6 +7,7 @@ const onUnlock = () => {
   ironIngot.unlock();
   ironPlate.unlock();
   ironRod.unlock();
+  ironGear.unlock();
 }
 
 export const getIron = new Unlock('Iron')

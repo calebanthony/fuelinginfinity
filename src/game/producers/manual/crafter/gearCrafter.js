@@ -1,5 +1,5 @@
 import { ManualProducer } from '../manualProducer';
-import { stick, processedStone, stoneGear, woodenGear } from 'game/resources';
+import { stick, processedStone, stoneGear, woodenGear, ironIngot, ironGear } from 'game/resources';
 
 class GearCrafter extends ManualProducer {
   constructor(name) {
@@ -9,11 +9,13 @@ class GearCrafter extends ManualProducer {
     this.dependencies = {
       [stick.name]: stick,
       [processedStone.name]: processedStone,
+      [ironIngot.name]: ironIngot,
     };
 
     this.recipes = [
       { inputs: [{ resource: stick, count: 8 }], output: woodenGear },
       { inputs: [{ resource: processedStone, count: 4 }], output: stoneGear },
+      { inputs: [{ resource: ironIngot, count: 4 }], output: ironGear },
     ];
   }
 

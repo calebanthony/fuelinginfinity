@@ -5,7 +5,7 @@ class Woodcutter extends Gatherer {
   constructor(name) {
     super(name);
     this.tickInterval = 100;
-    this.energyCost = 6;
+    this.energyCost = 4;
     this.outputItem = log;
   }
 }

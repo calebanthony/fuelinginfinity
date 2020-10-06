@@ -18,3 +18,10 @@ export { firstGenerator } from './automationAge/firstGenerator';
 export { getWoodchipper } from './automationAge/getWoodchipper';
 export { getIron } from './automationAge/getIron';
 export { buildExtruder } from './automationAge/buildExtruder';
+
+/**
+ * Tier 1
+ */
+export { buildExcavator } from './t1/buildExcavator';
+export { buildGrinder } from './t1/buildGrinder';
+export { buildSifter } from './t1/buildSifter';
