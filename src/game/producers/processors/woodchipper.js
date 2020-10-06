@@ -4,7 +4,7 @@ import { log, stick } from 'game/resources';
 class Woodchipper extends Processor {
   constructor(name) {
     super(name);
-    this.tickInterval = 50;
+    this.tickInterval = 30;
 
     this.recipes = [
       { name: 'Sticks', inputs: [{resource: log, count: 1}], outputs: [{resource: stick, count: 6}], fuelCost: 2 },

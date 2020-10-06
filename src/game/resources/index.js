@@ -23,6 +23,7 @@ export { goldDust } from './dust/goldDust';
 export { bronzeOre } from './ore/bronzeOre';
 export { tinOre } from './ore/tinOre';
 export { copperOre } from './ore/copperOre';
+export { ironOre } from './ore/ironOre';
 
 /**
  * Ingots
@@ -30,6 +31,7 @@ export { copperOre } from './ore/copperOre';
 export { bronzeIngot } from './ingot/bronzeIngot';
 export { tinIngot } from './ingot/tinIngot';
 export { copperIngot } from './ingot/copperIngot';
+export { ironIngot } from './ingot/ironIngot';
 
 /**
  * Gears
@@ -41,7 +43,14 @@ export { ironGear } from './gears/ironGear';
 
 
 /**
- * Wires
+ * Wire
  */
 export { copperWire } from './wire/copperWire';
 export { tinWire } from './wire/tinWire';
+
+/**
+ * Crafting Components
+ * Plates & Rods
+ */
+export { ironPlate } from './craftingComponents/ironPlate';
+export { ironRod } from './craftingComponents/ironRod';

@@ -1,5 +1,5 @@
 import { ManualProducer } from '../manualProducer';
-import { tinDust, copperDust, bronzeOre, tinOre, copperOre } from 'game/resources';
+import { tinDust, copperDust, bronzeOre, tinOre, copperOre, ironDust, ironOre } from 'game/resources';
 
 class ManualCompressor extends ManualProducer {
   constructor(name) {
@@ -7,13 +7,15 @@ class ManualCompressor extends ManualProducer {
     this.tickInterval = 35;
     this.dependencies = { 
       [tinDust.name]: tinDust,
-      [copperDust.name]: copperDust
+      [copperDust.name]: copperDust,
+      [ironDust.name]: ironDust,
     };
 
     this.recipes = [
       { inputs: [ { resource: tinDust, count: 1 }, { resource: copperDust, count: 1 }], output: bronzeOre },
       { inputs: [ { resource: tinDust, count: 3 } ], output: tinOre },
       { inputs: [ { resource: copperDust, count: 3 }], output: copperOre },
+      { inputs: [ { resource: ironDust, count: 3 }], output: ironOre },
     ];
   }
 

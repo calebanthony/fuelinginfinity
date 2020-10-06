@@ -11,13 +11,20 @@ class BaseGenerator extends Generator {
       [stick.name]: stick,
       [charcoal.name]: charcoal,
     };
+
+    this.potentialEnergy = 0;
   }
 
   onTick() {
     const fuel = this.fuels[this.dependencies.self.fuel];
 
-    if (fuel.decrement()) {
-      energy.increment(fuel.fuelValue / 2);
+    if (this.potentialEnergy === 0 && fuel.decrement()) {
+      this.potentialEnergy += fuel.fuelValue / 2;
+    }
+
+    if (this.potentialEnergy > 0) {
+      this.potentialEnergy -= 1;
+      energy.increment();
     }
   }
 
