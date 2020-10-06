@@ -15,3 +15,4 @@ export { getBaseFurnace } from './manualAge/getBaseFurnace';
 export { electricalComponents } from './automationAge/electricalComponents';
 export { getWoodcutter } from './automationAge/getWoodcutter';
 export { firstGenerator } from './automationAge/firstGenerator';
+export { getWoodchipper } from './automationAge/getWoodchipper';

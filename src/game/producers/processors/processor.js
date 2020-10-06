@@ -1,4 +1,5 @@
 import { Generator } from 'manugo';
+import { energy } from 'game/resources';
 
 export class Processor extends Generator {
   constructor(name) {
@@ -8,7 +9,8 @@ export class Processor extends Generator {
   }
 
   onTick() {
-    const fuel = this.fuels[this.dependencies.self.fuel];
+    const fuel = this.fuels ? this.fuels[this.dependencies.self.fuel] : energy;
+
     const { inputs, outputs, fuelCost } = this.recipes.find(({ name }) => name === this.dependencies.self.recipe);
 
     const hasResources = inputs.every(({ resource, count }) => {

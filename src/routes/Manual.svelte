@@ -1,5 +1,5 @@
 <script>
-    import ManualGatherer from '../components/Manual/Gatherer.svelte';
+    import Gatherer from '../components/Gatherer.svelte';
     import ManualCrafter from '../components/Manual/Crafter.svelte';
     import * as manualGatherers from 'game/producers/manual/gatherer';
     import * as manualCrafters from 'game/producers/manual/crafter';
@@ -9,7 +9,7 @@
 <h2 class="title is-2">Produce</h2>
 <div class="columns is-multiline">
     {#each Object.values(manualGatherers) as gatherer}
-        <ManualGatherer {gatherer} />
+        <Gatherer {gatherer} />
     {/each}
 </div>
 

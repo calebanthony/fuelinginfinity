@@ -44,7 +44,7 @@
          * 2 = Gather
          * 3 = Process
          */
-        changeTab(2);
+        changeTab(3);
     });
 
     onDestroy(() => {

@@ -8,7 +8,7 @@ class StickProducer extends ManualProducer {
   }
 
   onTick() {
-    stick.increment(40);
+    stick.increment();
   }
 }
 

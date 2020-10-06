@@ -3,52 +3,58 @@
     import { energy } from 'game/resources';
     import { tickDuration } from 'game/config';
 
-    export let producer;
+    export let gatherer;
 
     const ticksPerSecond = 1000 / tickDuration;
-    const perSecond = (ticksPerSecond / producer.tickInterval).toLocaleString();
+    const perSecond = (ticksPerSecond / gatherer.tickInterval).toLocaleString();
 </script>
 
-{#if $producer.unlocked}
-    <div class="column is-4 box">
-        <div class="level">
-            <div class="level-left">
-                <div class="level-item">
-                    <span class="icon is-medium">
-                        <Icon icon={producer.icon} color={producer.iconColor} />
-                    </span>
-                    <span>{producer.name}</span>
+{#if $gatherer.unlocked}
+    <div class="column is-4">
+        <div class="box">
+            <div class="level">
+                <div class="level-left">
+                    <div class="level-item">
+                        <span class="icon is-medium {$gatherer.active ? 'has-text-success' : ''}">
+                            <Icon icon={gatherer.icon} color={gatherer.iconColor} />
+                        </span>
+                        <span>{gatherer.name}</span>
+                    </div>
+                </div>
+                <div class="level-right">
+                    <div class="level-item buttons">
+                        {#if !$gatherer.active}
+                            <button
+                                title={gatherer.flavor}
+                                class="button is-small"
+                                on:click={() => gatherer.activate()}>
+                                Start
+                            </button>
+                        {:else}
+                            <button
+                                class="button is-danger is-small"
+                                on:click={() => gatherer.deactivate()}>
+                                <i class="fas fa-ban" />
+                            </button>
+                        {/if}
+                    </div>
                 </div>
             </div>
-            <div class="level-right">
-                <div class="level-item buttons">
-                    {#if !$producer.active}
-                        <button
-                            title={producer.flavor}
-                            class="button is-small"
-                            on:click={() => producer.activate()}>
-                            Start
-                        </button>
-                    {:else}
-                        <button
-                            class="button is-danger is-small"
-                            on:click={() => producer.deactivate()}>
-                            <i class="fas fa-ban" />
-                        </button>
-                    {/if}
+            {#if gatherer.outputItem}
+                <div class="level">
+                    <div class="level-item">
+                        <Icon icon={energy.icon} color={energy.iconColor} />
+                        -{perSecond * gatherer.energyCost}/s
+                    </div>
+                    <div class="level-item">=></div>
+                    <div class="level-item">
+                        <Icon
+                            icon={gatherer.outputItem.icon}
+                            color={gatherer.outputItem.iconColor} />
+                        +{perSecond}/s
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="level">
-            <div class="level-item">
-                <Icon icon={energy.icon} color={energy.iconColor} />
-                -{perSecond * producer.energyCost}/s
-            </div>
-            <div class="level-item">=></div>
-            <div class="level-item">
-                <Icon icon={producer.outputItem.icon} color={producer.outputItem.iconColor} />
-                +{perSecond}/s
-            </div>
+            {/if}
         </div>
     </div>
 {/if}

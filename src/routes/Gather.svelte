@@ -5,7 +5,7 @@
 
 <h2 class="title is-2">Gather</h2>
 <div class="columns is-multiline">
-    {#each Object.values(gatherers) as producer}
-        <Gatherer {producer} />
+    {#each Object.values(gatherers) as gatherer}
+        <Gatherer {gatherer} />
     {/each}
 </div>

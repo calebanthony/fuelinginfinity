@@ -1,5 +1,5 @@
 <script>
-    import Processor from '../components/Processor.svelte';
+    import Processor from '../components/Machines/Processor.svelte';
     import * as processors from 'game/producers/processors';
 </script>
 
