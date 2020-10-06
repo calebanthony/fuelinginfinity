@@ -6,6 +6,7 @@ export class Processor extends Generator {
     super(name);
 
     this.heat = 0;
+    this.storedHeat = 0;
   }
 
   onTick() {
@@ -17,25 +18,31 @@ export class Processor extends Generator {
       return this.dependencies[resource.name].count >= count;
     });
 
-    if (hasResources && fuel.decrement()) {
+    if (hasResources && this.heat < fuelCost && fuel.decrement()) {
       this.heat += fuel.fuelValue;
+    }
 
-      if (this.heat >= fuelCost) {
-        inputs.forEach(({ resource, count }) => {
-          resource.decrement(count);
-        });
+    if (this.heat >= fuelCost) {
+      this.storedHeat += 1;
+      this.heat -= 1;
+    }
 
-        outputs.forEach(({ resource, count }) => {
-          resource.increment(count);
-        });
-        
-        this.heat -= fuelCost;
-      }
+    if (this.storedHeat >= fuelCost) {
+      this.storedHeat -= fuelCost;
+
+      inputs.forEach(({ resource, count }) => {
+        resource.decrement(count);
+      });
+
+      outputs.forEach(({ resource, count }) => {
+        resource.increment(count);
+      });
     }
   }
 
   onDeactivate() {
     this.heat = 0;
+    this.storedHeat = 0;
   }
 
   changeFuel(fuel) {
