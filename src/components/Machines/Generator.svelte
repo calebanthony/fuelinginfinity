@@ -3,7 +3,7 @@
 
     export let generator;
 
-    $: fuelValue = fuelString => generator.fuels[fuelString].fuelValue;
+    $: fuelValue = fuelString => generator.fuels[fuelString].fuelValue / 2;
 </script>
 
 <div class="column is-4">

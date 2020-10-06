@@ -1,9 +1,10 @@
 import { Unlock } from 'manugo';
-import { log, bronzeIngot, copperWire, tinWire } from 'game/resources';
+import { log, charcoal, bronzeIngot, copperWire, tinWire } from 'game/resources';
 import { woodcutter } from 'game/producers/gatherers';
 
 const onUnlock = () => {
   log.unlock();
+  charcoal.unlock();
 
   woodcutter.unlock();
 }

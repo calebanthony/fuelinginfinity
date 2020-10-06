@@ -17,7 +17,7 @@ export class Processor extends Generator {
       return this.dependencies[resource.name].count >= count;
     });
 
-    if (fuel.decrement() && hasResources) {
+    if (hasResources && fuel.decrement()) {
       this.heat += fuel.fuelValue;
 
       if (this.heat >= fuelCost) {

@@ -7,8 +7,8 @@ class WireCrafter extends ManualProducer {
     this.tickInterval = 75;
 
     this.recipes = [
-      { inputs: [ { resource: tinIngot, count: 3 } ], output: tinWire },
-      { inputs: [ { resource: copperIngot, count: 3 } ], output: copperWire },
+      { inputs: [ { resource: tinIngot, count: 1 } ], output: tinWire },
+      { inputs: [ { resource: copperIngot, count: 1 } ], output: copperWire },
     ];
 
     this.dependencies = {

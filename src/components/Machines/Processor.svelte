@@ -6,6 +6,20 @@
 
     const ticksPerSecond = 1000 / tickDuration;
     const perSecond = (ticksPerSecond / processor.tickInterval).toLocaleString();
+
+    function inputs(recipe) {
+        return recipe.inputs.reduce((carry, input) => {
+            carry = `${carry} ${input.count} ${input.resource.name}`;
+            return carry;
+        }, '');
+    }
+
+    function outputs(recipe) {
+        return recipe.outputs.reduce((carry, output) => {
+            carry = `${carry} ${output.count} ${output.resource.name}`;
+            return carry;
+        }, '');
+    }
 </script>
 
 <div class="column is-4">
@@ -32,11 +46,11 @@
                     {#each Object.keys(processor.fuels) as fuel}
                         {#if $processor.fuel === fuel}
                             <option value={fuel} selected>
-                                {fuel} ({processor.fuels[fuel].fuelValue} Value)
+                                {fuel} ({processor.fuels[fuel].fuelValue} Fuel)
                             </option>
                         {:else}
                             <option value={fuel}>
-                                {fuel} ({processor.fuels[fuel].fuelValue} Value)
+                                {fuel} ({processor.fuels[fuel].fuelValue} Fuel)
                             </option>
                         {/if}
                     {/each}
@@ -50,11 +64,11 @@
                     {#each processor.recipes as recipe}
                         {#if $processor.recipe === recipe.name}
                             <option value={recipe.name} selected>
-                                {recipe.name} ({recipe.fuelCost} Cost)
+                                {inputs(recipe)} -> {outputs(recipe)} ({recipe.fuelCost} Fuel)
                             </option>
                         {:else}
                             <option value={recipe.name}>
-                                {recipe.name} ({recipe.fuelCost} Cost)
+                                {inputs(recipe)} -> {outputs(recipe)} ({recipe.fuelCost} Fuel)
                             </option>
                         {/if}
                     {/each}

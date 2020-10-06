@@ -6,6 +6,8 @@ export { processedStone } from './processedStone';
  */
 export { energy } from './fuel/energy';
 export { stick } from './fuel/stick';
+export { log } from './fuel/log';
+export { charcoal } from './fuel/charcoal';
 
 /**
  * Dust
@@ -43,8 +45,3 @@ export { ironGear } from './gears/ironGear';
  */
 export { copperWire } from './wire/copperWire';
 export { tinWire } from './wire/tinWire';
-
-/**
- * Misc
- */
-export { log } from './misc/log';

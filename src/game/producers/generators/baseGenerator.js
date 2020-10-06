@@ -1,5 +1,5 @@
 import { Generator } from 'manugo';
-import { energy, stick, log } from 'game/resources';
+import { energy, stick, log, charcoal } from 'game/resources';
 
 class BaseGenerator extends Generator {
   constructor(name) {
@@ -9,6 +9,7 @@ class BaseGenerator extends Generator {
     this.fuels = {
       [log.name]: log,
       [stick.name]: stick,
+      [charcoal.name]: charcoal,
     };
   }
 

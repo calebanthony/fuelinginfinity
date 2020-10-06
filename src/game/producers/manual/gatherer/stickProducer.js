@@ -4,7 +4,7 @@ import { stick } from 'game/resources';
 class StickProducer extends ManualProducer {
   constructor(name) {
     super(name);
-    this.tickInterval = 9;
+    this.tickInterval = 20;
   }
 
   onTick() {

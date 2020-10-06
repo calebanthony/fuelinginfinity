@@ -12,8 +12,8 @@ class ManualCompressor extends ManualProducer {
 
     this.recipes = [
       { inputs: [ { resource: tinDust, count: 1 }, { resource: copperDust, count: 1 }], output: bronzeOre },
-      { inputs: [ { resource: tinDust, count: 1 } ], output: tinOre },
-      { inputs: [ { resource: copperDust, count: 1 }], output: copperOre },
+      { inputs: [ { resource: tinDust, count: 3 } ], output: tinOre },
+      { inputs: [ { resource: copperDust, count: 3 }], output: copperOre },
     ];
   }
 
