@@ -1,1 +1,1 @@
-export { stickCollector } from './stickCollector';
+export { woodcutter } from './woodcutter';

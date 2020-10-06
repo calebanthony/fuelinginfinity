@@ -1,6 +1,7 @@
 <script>
     import { setContext, getContext, onMount, onDestroy, createEventDispatcher } from 'svelte';
     import { get, writable } from 'svelte/store';
+    import { energy } from 'game/resources';
 
     const dispatch = createEventDispatcher();
 
@@ -8,26 +9,6 @@
      * @svelte-prop {Number} [value=0]
      * */
     export let value = 0;
-
-    /** Size of tabs
-     * @svelte-prop {String} [size]
-     * @values $$sizes$$
-     * */
-    export let size = '';
-
-    /** Position of tabs list, horizontally. By default they're positioned to the left
-     * @svelte-prop {String} [position]
-     * @values is-centered, is-right
-     * */
-    export let position = '';
-
-    /** Style of tabs
-     * @svelte-prop {String} [style]
-     * @values is-boxed, is-toggle, is-toggle-rounded, is-fullwidth
-     * */
-    export let style = 'is-boxed';
-
-    export let expanded = true;
 
     let activeTab = 0;
     $: changeTab(value);
@@ -59,8 +40,9 @@
     onMount(() => {
         /**
          * 0 = Manual
-         * 1 = Gather
-         * 2 = Process
+         * 1 = Energy
+         * 2 = Gather
+         * 3 = Process
          */
         changeTab(2);
     });
@@ -82,13 +64,17 @@
     }
 </style>
 
-<div class="tabs-wrapper" class:is-fullwidth={expanded}>
-    <div class="tabs {size} {position} {style}">
+<div class="tabs-wrapper is-fullwidth">
+    <div class="tabs is-boxed">
         <ul>
             {#each $tabs as tab, index}
                 <li class:is-active={index === activeTab}>
                     <a href on:click|preventDefault={() => changeTab(index)}>
-                        <span>{tab.label}</span>
+                        {#if tab.label === 'Energy'}
+                            <span>{$energy.count.toLocaleString()} {tab.label}</span>
+                        {:else}
+                            <span>{tab.label}</span>
+                        {/if}
                     </a>
                 </li>
             {/each}

@@ -4,6 +4,7 @@ export { processedStone } from './processedStone';
 /**
  * Fuel
  */
+export { energy } from './fuel/energy';
 export { stick } from './fuel/stick';
 
 /**
@@ -42,3 +43,8 @@ export { ironGear } from './gears/ironGear';
  */
 export { copperWire } from './wire/copperWire';
 export { tinWire } from './wire/tinWire';
+
+/**
+ * Misc
+ */
+export { log } from './misc/log';

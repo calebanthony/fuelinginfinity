@@ -1,5 +1,6 @@
 <script>
     import Icon from './Partials/Icon.svelte';
+    import { energy } from 'game/resources';
     import { tickDuration } from 'game/config';
 
     export let producer;
@@ -20,7 +21,33 @@
                 </div>
             </div>
             <div class="level-right">
-                <div class="level-item">{perSecond}/s</div>
+                <div class="level-item buttons">
+                    {#if !$producer.active}
+                        <button
+                            title={producer.flavor}
+                            class="button is-small"
+                            on:click={() => producer.activate()}>
+                            Start
+                        </button>
+                    {:else}
+                        <button
+                            class="button is-danger is-small"
+                            on:click={() => producer.deactivate()}>
+                            <i class="fas fa-ban" />
+                        </button>
+                    {/if}
+                </div>
+            </div>
+        </div>
+        <div class="level">
+            <div class="level-item">
+                <Icon icon={energy.icon} color={energy.iconColor} />
+                -{perSecond * producer.energyCost}/s
+            </div>
+            <div class="level-item">=></div>
+            <div class="level-item">
+                <Icon icon={producer.outputItem.icon} color={producer.outputItem.iconColor} />
+                +{perSecond}/s
             </div>
         </div>
     </div>

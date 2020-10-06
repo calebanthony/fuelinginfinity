@@ -3,12 +3,14 @@
     import * as resources from 'game/resources';
 
     let filter = '';
-    $: filteredResources = Object.values(resources).filter(resource => {
-        return resource.name.toLowerCase().includes(filter);
-    });
+    $: filteredResources = Object.values(resources)
+        .filter(resource => {
+            return resource.name.toLowerCase().includes(filter);
+        })
+        .filter(resource => resource.name !== 'Energy');
 </script>
 
-<nav class="panel">
+<nav class="panel resource-panel">
     <p class="panel-heading">Resources</p>
     <div class="panel-block">
         <p class="control has-icons-left">

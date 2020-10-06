@@ -1,4 +1,5 @@
 <script>
+    import Icon from './Partials/Icon.svelte';
     export let unlock;
 
     const runUnlock = unlock => {
@@ -16,7 +17,7 @@
                 <span class="has-text-weight-bold">Cost:</span>
                 {#each unlock.costsToUnlock as cost}
                     <span class="icon is-medium" title={cost.model.name}>
-                        <i class="fas fa-{cost.model.icon} fa-lg" />
+                        <Icon icon={cost.model.icon} color={cost.model.iconColor} />
                     </span>
                     <span>{cost.number}</span>
                 {/each}

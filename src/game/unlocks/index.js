@@ -12,4 +12,6 @@ export { getBaseFurnace } from './manualAge/getBaseFurnace';
 /**
  * Automation Age
  */
-export { getStickCollector } from './automationAge/getStickCollector';
+export { electricalComponents } from './automationAge/electricalComponents';
+export { getWoodcutter } from './automationAge/getWoodcutter';
+export { firstGenerator } from './automationAge/firstGenerator';

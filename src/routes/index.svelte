@@ -5,11 +5,13 @@
     import Unlockable from '../components/Unlockable.svelte';
 
     import * as unlocks from 'game/unlocks';
-    import { stickCollector } from 'game/producers/gatherers';
+    import { woodcutter } from 'game/producers/gatherers';
     import { baseFurnace } from 'game/producers/processors';
+    import { energy } from 'game/resources';
 
     import Manual from './Manual.svelte';
     import Gather from './Gather.svelte';
+    import Energy from './Energy.svelte';
     import Process from './Process.svelte';
 </script>
 
@@ -27,7 +29,12 @@
                 <Tab label="Manual">
                     <Manual />
                 </Tab>
-                {#if $stickCollector.unlocked}
+                {#if $energy.unlocked}
+                    <Tab label="Energy">
+                        <Energy />
+                    </Tab>
+                {/if}
+                {#if $woodcutter.unlocked}
                     <Tab label="Gather">
                         <Gather />
                     </Tab>

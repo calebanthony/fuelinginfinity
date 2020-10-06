@@ -5,3 +5,9 @@
 .box {
   margin: 0;
 }
+
+.resource-panel {
+  max-height: 90vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}

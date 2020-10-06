@@ -1,6 +1,6 @@
 <script>
-    export let processor;
     import { tickDuration } from 'game/config';
+    export let processor;
 
     const ticksPerSecond = 1000 / tickDuration;
     const perSecond = (ticksPerSecond / processor.tickInterval).toLocaleString();
@@ -53,14 +53,12 @@
     <div class="select is-fullwidth">
         <select on:blur={e => processor.changeRecipe(e.target.value)}>
             {#each processor.recipes as recipe}
-                {#if $processor.recipe === recipe.output.name}
-                    <option value={recipe.output.name} selected>
-                        {recipe.output.name} ({recipe.fuelCost} Cost)
+                {#if $processor.recipe === recipe.name}
+                    <option value={recipe.name} selected>
+                        {recipe.name} ({recipe.fuelCost} Cost)
                     </option>
                 {:else}
-                    <option value={recipe.output.name}>
-                        {recipe.output.name} ({recipe.fuelCost} Cost)
-                    </option>
+                    <option value={recipe.name}>{recipe.name} ({recipe.fuelCost} Cost)</option>
                 {/if}
             {/each}
         </select>

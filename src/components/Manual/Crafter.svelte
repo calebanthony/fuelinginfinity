@@ -1,14 +1,11 @@
 <script>
-    import Compressor from '../Machines/Compressor.svelte';
-    import GearCrafter from '../Machines/GearCrafter.svelte';
+    import CrafterWithOptions from '../Machines/CrafterWithOptions.svelte';
 
     export let crafter;
 </script>
 
-{#if crafter.name === 'Compressor' && $crafter.unlocked}
-    <Compressor {crafter} />
-{:else if crafter.name === 'Craft Gears' && $crafter.unlocked}
-    <GearCrafter {crafter} />
+{#if ['Compressor', 'Craft Gears', 'Craft Wire'].includes(crafter.name) && $crafter.unlocked}
+    <CrafterWithOptions {crafter} />
 {:else if $crafter.unlocked}
     <div class="column is-4 box">
         <div class="level">

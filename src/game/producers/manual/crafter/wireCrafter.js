@@ -7,15 +7,27 @@ class WireCrafter extends ManualProducer {
     this.tickInterval = 75;
 
     this.recipes = [
-      { input: tinIngot, inputCost: 3, output: tinWire },
-      { input: copperIngot, inputCost: 3, output: copperWire },
+      { inputs: [ { resource: tinIngot, count: 3 } ], output: tinWire },
+      { inputs: [ { resource: copperIngot, count: 3 } ], output: copperWire },
     ];
+
+    this.dependencies = {
+      [tinIngot.name]: tinIngot,
+      [copperIngot.name]: copperIngot,
+    };
   }
 
   onTick() {
     const recipe = this.recipes.find((recipe) => recipe.output.name === this.dependencies.self.recipe);
 
-    if (recipe.input.decrement(recipe.inputCost)) {
+    const hasResources = recipe.inputs.every(({ resource, count }) => {
+      return this.dependencies[resource.name].count >= count;
+    });
+
+    if (hasResources) {
+      recipe.inputs.forEach(({ resource, count }) => {
+        resource.decrement(count);
+      });
       recipe.output.increment();
     }
   }
