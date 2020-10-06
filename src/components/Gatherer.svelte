@@ -1,5 +1,6 @@
 <script>
     import Icon from './Partials/Icon.svelte';
+    import MachineToggle from './Partials/MachineToggle.svelte';
     import { energy } from 'game/resources';
     import { tickDuration } from 'game/config';
 
@@ -23,20 +24,7 @@
                 </div>
                 <div class="level-right">
                     <div class="level-item buttons">
-                        {#if !$gatherer.active}
-                            <button
-                                title={gatherer.flavor}
-                                class="button is-small"
-                                on:click={() => gatherer.activate()}>
-                                Start
-                            </button>
-                        {:else}
-                            <button
-                                class="button is-danger is-small"
-                                on:click={() => gatherer.deactivate()}>
-                                <i class="fas fa-ban" />
-                            </button>
-                        {/if}
+                        <MachineToggle machine={gatherer} />
                     </div>
                 </div>
             </div>

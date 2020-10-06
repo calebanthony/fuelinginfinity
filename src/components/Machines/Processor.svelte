@@ -1,5 +1,7 @@
 <script>
+    import MachineToggle from '../Partials/MachineToggle.svelte';
     import { tickDuration } from 'game/config';
+
     export let processor;
 
     const ticksPerSecond = 1000 / tickDuration;
@@ -19,20 +21,7 @@
             </div>
             <div class="level-right">
                 <div class="level-item buttons">
-                    {#if !$processor.active}
-                        <button
-                            title={processor.flavor}
-                            class="button is-small"
-                            on:click={() => processor.activate()}>
-                            Start
-                        </button>
-                    {:else}
-                        <button
-                            class="button is-danger is-small"
-                            on:click={() => processor.deactivate()}>
-                            <i class="fas fa-ban" />
-                        </button>
-                    {/if}
+                    <MachineToggle machine={processor} />
                 </div>
             </div>
         </div>

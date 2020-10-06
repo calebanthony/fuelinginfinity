@@ -1,4 +1,6 @@
 <script>
+    import MachineToggle from '../Partials/MachineToggle.svelte';
+
     export let crafter;
 
     function cost(recipe) {
@@ -22,20 +24,7 @@
                 </div>
                 <div class="level-right">
                     <div class="level-item buttons">
-                        {#if !$crafter.active}
-                            <button
-                                title={crafter.flavor}
-                                class="button is-small"
-                                on:click={() => crafter.activate()}>
-                                Start
-                            </button>
-                        {:else}
-                            <button
-                                class="button is-danger is-small"
-                                on:click={() => crafter.deactivate()}>
-                                <i class="fas fa-ban" />
-                            </button>
-                        {/if}
+                        <MachineToggle machine={crafter} />
                     </div>
                 </div>
             </div>

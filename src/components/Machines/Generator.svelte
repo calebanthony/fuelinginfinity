@@ -1,4 +1,6 @@
 <script>
+    import MachineToggle from '../Partials/MachineToggle.svelte';
+
     export let generator;
 
     $: fuelValue = fuelString => generator.fuels[fuelString].fuelValue;
@@ -17,20 +19,7 @@
             </div>
             <div class="level-right">
                 <div class="level-item buttons">
-                    {#if !$generator.active}
-                        <button
-                            title={generator.flavor}
-                            class="button is-small"
-                            on:click={() => generator.activate()}>
-                            Start
-                        </button>
-                    {:else}
-                        <button
-                            class="button is-danger is-small"
-                            on:click={() => generator.deactivate()}>
-                            <i class="fas fa-ban" />
-                        </button>
-                    {/if}
+                    <MachineToggle machine={generator} />
                 </div>
             </div>
         </div>
